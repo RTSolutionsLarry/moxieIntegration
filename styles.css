@@ -1,0 +1,27 @@
+body {
+    background-color:brown
+}
+
+#listOfClientsDiv {
+    border: solid;
+    height: 30vh;
+    width: 40vh;
+    margin: auto; 
+    position: relative;
+    top: 20vh;
+    background-color: white;
+}
+
+h3 {
+    text-align: center;
+}
+
+#listOfClientsDivUL {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+h1 {
+    margin-top: 900px;
+}
