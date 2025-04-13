@@ -1,7 +1,8 @@
 const body = document.body;
 const list = document.getElementById("listOfClientsDivUL")
-const apiKey = '67f34d651e017b0ef702ebad.238c9faee6adaca783bd89ecee63fbf098b7d68b161068edcb1b61ac1a1d9f36';
+// const apiKey = 'Put_key_here';
 const apiUrl = 'https://pod01.withmoxie.com/api/public/action/clients/list';
+const getApiUrl = 'https://pod01.withmoxie.com/api/public/action/tasks/create';
 let clientData;
 let clientList = [];
 
@@ -25,5 +26,24 @@ fetch(apiUrl, {
         list.innerHTML += `<li>${x.name}</li>`;
     }
   })
+
+  //Create task in Moxie. Running this code will automatically create a task in Moxie.
+
+//   fetch(getApiUrl, {
+//     method: "POST",
+//     body: JSON.stringify({
+//       "name": "Test Name",
+//       "clientName": "Test Client",
+//       "projectName": "Test Project",     
+//       "startDate": "2023-07-20",
+//       "description": "Test Description"
+//     }),
+//     headers: {
+//       "Content-type": "application/json; charset=UTF-8",
+//       'X-API-Key': apiKey
+//     }
+//   })
+//     .then((response) => response.json())
+//     .then((json) => console.log(json));
 
 
