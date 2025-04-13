@@ -1,6 +1,6 @@
 const body = document.body;
 const list = document.getElementById("listOfClientsDivUL")
-const apiKey = '67f34d651e017b0ef702ebad.238c9faee6adaca783bd89ecee63fbf098b7d68b161068edcb1b61ac1a1d9f36';
+const apiKey = '';
 const apiUrl = 'https://pod01.withmoxie.com/api/public/action/clients/list';
 let clientData;
 let clientList = [];
