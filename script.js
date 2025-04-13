@@ -1,6 +1,7 @@
 const body = document.body;
 const list = document.getElementById("listOfClientsDivUL")
-// const apiKey = 'Put_key_here';
+const clientPicklist = document.getElementById('clientPicklist');
+//const apiKey = 'copyApiKeyHere';
 const apiUrl = 'https://pod01.withmoxie.com/api/public/action/clients/list';
 const getApiUrl = 'https://pod01.withmoxie.com/api/public/action/tasks/create';
 let clientData;
@@ -23,8 +24,9 @@ fetch(apiUrl, {
     clientData = data;
     console.log(clientData);
     for (let x of clientData) {
-        list.innerHTML += `<li>${x.name}</li>`;
+        clientPicklist.innerHTML += `<option value="${x.name}">${x.name}</option>`;
     }
+
   })
 
   //Create task in Moxie. Running this code will automatically create a task in Moxie.
